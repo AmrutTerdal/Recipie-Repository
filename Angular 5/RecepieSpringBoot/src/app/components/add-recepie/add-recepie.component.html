@@ -1,0 +1,119 @@
+
+<div class="row">
+    <div class="col-md-6"> 
+    <a routerLink="/" class="btn btn-link">
+      <i class="fa fa-arrow-circle-o-left"> Back To Recipie List</i>
+    </a>   
+    </div> 
+    <div class="col-md-6">
+  
+    </div>
+  </div>
+
+
+<div class="card">
+  <div class="card-header">
+    Add Recipie
+  </div>
+  <div class="card-body">
+    <form #recipieForm="ngForm" (ngSubmit)="onSubmit(recipieForm)">
+      <div class="form-group">
+        <label for="recipieName">Recipie Name</label>
+        <input type="text"
+         class="form-control"
+         name="recipieName"
+        #recipieRecipieName="ngModel"
+        [ngClass]="{'is-invalid':recipieRecipieName.errors && recipieRecipieName.touched}"
+        [(ngModel)]="recipie.recipieName"
+        minlength="2"
+        required
+         >
+         <div [hidden]="!recipieRecipieName.errors?.required" class="invalid-feedback">
+          Recipie Name required
+         </div>
+         <div [hidden]="!recipieRecipieName.errors?.minlength" class="invalid-feedback">
+         Must be Atleast 2 Character
+         </div>
+      </div>
+      <div class="form-group">
+            <label for="ingredient1">Ingredient 1</label>
+            <input type="text"
+             class="form-control"
+             name="ingredient1"
+            #recipieIngredient1="ngModel"
+            [ngClass]="{'is-invalid':recipieIngredient1.errors && recipieIngredient1.touched}"
+            [(ngModel)]="recipie.ingredient1"
+            minlength="2"
+            required
+             >
+             <div [hidden]="!recipieIngredient1.errors?.required" class="invalid-feedback">
+              Ingredient 1 required
+             </div>
+             <div [hidden]="!recipieIngredient1.errors?.minlength" class="invalid-feedback">
+             Must be Atleast 2 Character
+             </div>
+          </div>
+
+          <div class="form-group">
+              <label for="ingredient2">Ingredient 2</label>
+              <input type="text"
+               class="form-control"
+               name="ingredient2"
+              #recipieIngredient2="ngModel"
+              [ngClass]="{'is-invalid':recipieIngredient2.errors && recipieIngredient2.touched}"
+              [(ngModel)]="recipie.ingredient2"
+              minlength="2"
+              required
+               >
+               <div [hidden]="!recipieIngredient2.errors?.required" class="invalid-feedback">
+                Ingredient 2 required
+               </div>
+               <div [hidden]="!recipieIngredient2.errors?.minlength" class="invalid-feedback">
+               Must be Atleast 2 Character
+               </div>
+            </div>
+
+            <div class="form-group">
+                <label for="ingredient3">Ingredient 3</label>
+                <input type="text"
+                 class="form-control"
+                 name="ingredient3"
+                #recipieIngredient3="ngModel"
+                [ngClass]="{'is-invalid':recipieIngredient3.errors && recipieIngredient3.touched}"
+                [(ngModel)]="recipie.ingredient3"
+                minlength="2"
+                required
+                 >
+                 <div [hidden]="!recipieIngredient3.errors?.required" class="invalid-feedback">
+                  Ingredient 3 required
+                 </div>
+                 <div [hidden]="!recipieIngredient3.errors?.minlength" class="invalid-feedback">
+                 Must be Atleast 2 Character
+                 </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="ingredient4">Ingredient 4</label>
+                  <input type="text"
+                   class="form-control"
+                   name="ingredient4"
+                  #recipieIngredient4="ngModel"
+                  [ngClass]="{'is-invalid':recipieIngredient4.errors && recipieIngredient4.touched}"
+                  [(ngModel)]="recipie.ingredient4"
+                  minlength="2"
+                  required
+                   >
+                   <div [hidden]="!recipieIngredient4.errors?.required" class="invalid-feedback">
+                    Ingredient 4 required
+                   </div>
+                   <div [hidden]="!recipieIngredient4.errors?.minlength" class="invalid-feedback">
+                   Must be Atleast 2 Character
+                   </div>
+                </div>
+
+          <input type="submit"  class="btn btn-primary btn-block">
+
+
+        </form>
+    </div>
+  </div>

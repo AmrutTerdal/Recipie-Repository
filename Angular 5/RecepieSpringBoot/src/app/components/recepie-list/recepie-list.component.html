@@ -1,0 +1,17 @@
+<h2>Recipie List</h2>
+<div class="card card-primary" *ngFor="let recipie of recipies" >
+  <div class="card-body" *ngIf="recipies?.length > 0;else noRecipie" >
+    <h3>{{recipie.recipieName}}</h3>
+    <hr>
+    <p>{{recipie.ingredient1}}</p>
+    <p>{{recipie.ingredient2}}</p>
+    <p>{{recipie.ingredient3}}</p>
+    <p>{{recipie.ingredient4}}</p>
+    
+
+  </div>
+</div>
+<ng-template #noRecipie>
+    <hr>
+    <h5>No Clients in the table</h5>
+ </ng-template>
